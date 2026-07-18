@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  transition: var(--transition-smooth);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Tipografia */
+h1, h2, h3, .logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.intro-tag,
+.tag,
+.case-meta,
+.case-label,
+.footer-bottom,
+.metric-value {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Utilitários */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 3rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Átila Costa | Product Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Atlix.</a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+
+            <nav id="main-nav" class="nav-links" aria-label="Navegação principal">
+                <a href="#projetos">Projetos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <button id="theme-toggle" aria-label="Alternar tema">
+                <span class="icon-moon">🌙</span>
+                <span class="icon-sun">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="intro-tag slide-up slide-up-1">{ Product & UX/UI Designer }</p>
+                    <h1 class="headline slide-up slide-up-2">Projetando interfaces <span class="text-accent">eficientes</span> que conectam pessoas a negócios.</h1>
+                    <p class="subheadline slide-up slide-up-3">Focado em construir soluções digitais organizadas, analíticas e livres.</p>
+                    <div class="cta-group slide-up slide-up-4">
+                        <a href="#projetos" class="btn btn-primary">Ver Cases <span class="btn-arrow" aria-hidden="true">→</span></a>
+                        <a href="./assets/atila-curriculo.pdf" class="btn btn-secondary link-arrow" target="_blank" rel="noopener noreferrer">Currículo PDF</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="abstract-shape shape-1"></div>
+                    <div class="abstract-shape shape-2"></div>
+                    <div class="glass-shape glass-1 parallax-element" data-speed="0.05"></div>
+                    <div class="glass-shape glass-2 parallax-element" data-speed="-0.03"></div>
+                    <div class="glass-shape glass-3 parallax-element" data-speed="0.08"></div>
+                    <div class="hero-image-wrapper parallax-element" data-speed="0.04">
+                      <img src="/images/me.png" alt="Atila Costa" class="profile-img parallax-element" data-speed="0.02">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section container">
+            <div class="section-grid">
+                <div class="section-header">
+                    <h2>Sobre mim</h2>
+                </div>
+                <div class="section-content">
+                    <p>Sou Atila, um designer de 17 anos natural de Betim-MG, movido pela curiosidade e pela busca constante por eficiência. Minha jornada começou na ciência e na biologia, mas encontrei na tecnologia o cenário perfeito para explorar a liberdade criativa e analítica, muito inspirado pela trajetória do meu irmão.</p>
+                    <p>Quando não estou projetando interfaces, divido meu foco entre a disciplina física da calistenia e musculação, a música e a sabedoria das filosofias orientais. Sou aficionado pela liberdade e valorizo imensamente o processo de aprendizado contínuo em cada detalhe da vida.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills-section container">
+            <div class="section-grid">
+                <div class="section-header">
+                    <h2>Habilidades</h2>
+                </div>
+                <div class="section-content">
+                    <div class="skill-block">
+                        <h3>Formação & Liderança</h3>
+                        <p>Cursando o 3º ano do Ensino Médio, com formação complementar em UI/UX Design e Processos Administrativos. Reconhecido como Aluno Destaque por 5 anos consecutivos e líder de turma.</p>
+                    </div>
+                    <div class="skill-block">
+                        <h3>Técnica & Perfil</h3>
+                        <p>Experiência prática na criação de interfaces digitais, com foco em landing pages e comunicação visual forte. Abordagem analítica e orientada a resultados, equilibrada com um olhar cuidadoso para os processos e para cada pequena descoberta ao longo do projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projects-section container">
+            <h2>Projetos Selecionados</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a href="examesus.html" class="project-card-link" aria-label="Ver case de estudo ExameSUS">
+                        <div class="project-thumbnail">
+                            <img src="assets/Cover-remake.svg" alt="Capa do Projeto ExameSUS" class="project-cover-img">
+                        </div>
+                    </a>
+                    <div class="project-meta">
+                        <span class="tag">UX/UI</span>
+                        <span class="tag">Saúde/SUS</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+                    <h3 class="project-title">ExameSUS</h3>
+                    <p class="project-desc">Aplicativo para desburocratizar atendimentos no SUS. Redução de burocracia e aumento de eficiência estimado em 122% no acompanhamento de exames públicos.</p>
+                    <a href="examesus.html" class="case-link link-arrow">Ler Case de Estudo</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="site-footer container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h2>Vamos conversar?</h2>
+                <p>Estou sempre aberto a novos desafios e oportunidades.</p>
+                <a href="mailto:atilacsilva2008@gmail.com" class="contact-link link-arrow">atilacsilva2008@gmail.com</a>
+                <p class="phone-note">(31) 99269-7524 <br><small>*Devido ao estágio, deixe uma mensagem caso ligue entre 13h e 17h.</small></p>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/atila-s-871a9b340/" class="link-arrow" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/AtilaCSilva" class="link-arrow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="./assets/atila-curriculo.pdf" class="link-arrow" target="_blank" rel="noopener noreferrer">Currículo (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Atila Costa Silva. Designed & Coded by Atlix with Cursor.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

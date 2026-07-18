@@ -1,0 +1,23 @@
+:root {
+  /* LIGHT MODE */
+  --bg-primary: #FAF9F5;
+  --bg-secondary: #F4F3EE;
+  --text-primary: #1A1B1F;
+  --text-secondary: #606470;
+  --accent: #4F46E5;
+  --border: #E5E3DD;
+  --transition: 0.4s ease;
+  --transition-smooth: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  --section-gap: clamp(4rem, 8vw, 7rem);
+  --content-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+html.dark {
+  /* DARK MODE */
+  --bg-primary: #0D0E11;
+  --bg-secondary: #16171B;
+  --text-primary: #E3E4E6;
+  --text-secondary: #8E939E;
+  --accent: #818CF8;
+  --border: #1F2128;
+}

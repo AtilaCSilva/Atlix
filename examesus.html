@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExameSUS — Case Study | Átila Costa</title>
+    <meta name="description" content="Case study do ExameSUS: aplicativo mobile para desburocratizar atendimentos no SUS. Lead UI/UX Design por Átila Costa Silva.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="case-page">
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Atlix.</a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+
+            <nav id="main-nav" class="nav-links" aria-label="Navegação principal">
+                <a href="index.html#projetos">Projetos</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+
+            <button id="theme-toggle" aria-label="Alternar tema">
+                <span class="icon-moon">🌙</span>
+                <span class="icon-sun">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero do Case -->
+        <section class="case-hero container">
+            <a href="index.html#projetos" class="case-back">Voltar aos projetos</a>
+            <h1 class="case-hero-title">ExameSUS</h1>
+            <p class="case-hero-subtitle">Aplicativo para desburocratizar seus atendimentos no SUS</p>
+            <ul class="case-meta-list">
+                <li><span class="case-meta">Duração:</span> <strong>4 meses</strong> <span class="case-meta">(Dez/2024 – Mar/2025)</span></li>
+                <li><span class="case-meta">Papel:</span> <strong>Lead UI/UX Designer</strong></li>
+                <li><span class="case-meta">Plataforma:</span> <strong>Mobile</strong></li>
+                <li><span class="case-meta">Público:</span> <strong>Trabalho final — Coderhouse</strong></li>
+            </ul>
+            <div class="case-cover">
+                <img src="assets/examesus/00-cover.png" alt="Mockup final do aplicativo ExameSUS" loading="lazy" onerror="this.remove()">
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="case-section container" aria-labelledby="overview-title">
+            <div class="case-section-header">
+                <span class="case-label">Visão Geral</span>
+                <h2 id="overview-title">Project Overview</h2>
+                <p>Um resumo estruturado do desafio, problema, solução e impacto do projeto.</p>
+            </div>
+            <div class="case-grid case-grid--2">
+                <article class="case-card">
+                    <h3>O Desafio</h3>
+                    <p>Criar uma solução para aumentar a eficiência no atendimento em unidades de saúde pública, reduzindo gargalos que afetam milhões de brasileiros diariamente.</p>
+                </article>
+                <article class="case-card">
+                    <h3>O Problema</h3>
+                    <p>54% dos usuários do SUS apontam o tempo de espera como o maior problema. A burocracia excessiva que atrasa a marcação de exames e consultas é citada por 38% dos usuários.</p>
+                </article>
+                <article class="case-card">
+                    <h3>A Solução</h3>
+                    <p>Estreitar as relações entre instituição e pacientes, encurtando processos de atendimento desfavoráveis e facilitando o acesso e envio de resultados e documentos.</p>
+                </article>
+                <article class="case-card case-card--impact">
+                    <h3>O Impacto</h3>
+                    <p>Redução de burocracia e aumento de eficiência estimado em:</p>
+                    <span class="metric-value">122%</span>
+                    <p>no acompanhamento de exames públicos.</p>
+                </article>
+            </div>
+            <div class="case-media case-media--wide case-media--contain">
+                <img src="assets/examesus/01-double-diamond.png" alt="Diagrama do processo Double Diamond — Discover, Define, Develop e Deliver" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Discovery -->
+        <section class="case-section container" aria-labelledby="discovery-title">
+            <div class="case-section-header">
+                <span class="case-label">Fase 1</span>
+                <h2 id="discovery-title">Descoberta</h2>
+                <p>Inicialmente, utilizei uma abordagem analítica para entender as falhas sistêmicas do atendimento público.</p>
+            </div>
+            <ul class="case-bullet-list">
+                <li>
+                    <strong>Desk Research</strong>
+                    Identifiquei que a percepção de mau atendimento (89% dos brasileiros) vem da demora no processo, com 54% das reclamações focadas especificamente na espera por exames e consultas.
+                </li>
+                <li>
+                    <strong>Pontos de Fricção — Principais Críticas</strong>
+                    <div class="case-friction-grid">
+                        <div class="friction-item"><span>54%</span><small>Tempo de espera</small></div>
+                        <div class="friction-item"><span>38%</span><small>Encaminhamento de exames</small></div>
+                        <div class="friction-item"><span>24%</span><small>Assistência básica</small></div>
+                        <div class="friction-item"><span>22%</span><small>Encaminhamento AME</small></div>
+                        <div class="friction-item"><span>21%</span><small>Outros encaminhamentos</small></div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Matriz CSD</strong>
+                    Ferramenta fundamental para alinhar certezas e dúvidas sobre o funcionamento da atenção primária e secundária do SUS. Dúvidas sobre características do público-alvo e motivações para ir a uma UBS se tornaram questionamentos centrais nos roteiros de pesquisa.
+                </li>
+                <li>
+                    <strong>Inteligência Artificial</strong>
+                    Através de chatbots, explorei diversas ideias e me aprofundei no conhecimento de como funcionam os sistemas de saúde em todos os âmbitos — além do SUS e os melhores do mundo.
+                </li>
+            </ul>
+            <div class="case-media">
+                <img src="assets/examesus/02-discovery-ai.png" alt="Ilustração com balões de ChatGPT e Gemini" loading="lazy" onerror="this.remove()">
+            </div>
+        </section>
+
+        <!-- Definição -->
+        <section class="case-section container" aria-labelledby="definition-title">
+            <div class="case-section-header">
+                <span class="case-label">Fase 2</span>
+                <h2 id="definition-title">Definição</h2>
+                <p>Após a análise, decidi focar em mitigar o problema do encaminhamento de exames. A partir de perguntas norteadoras e visitas a UBSs, defini meu ponto de vista.</p>
+            </div>
+            <blockquote class="quote-block">
+                <p>"Estou criando para um usuário do SUS que vai a uma UBS para realizar consultas ou que necessita de um exame, mas sempre passa por processos chatos e ineficientes que degradam ou impedem a realização de seus objetivos."</p>
+                <cite>— POV Statement</cite>
+            </blockquote>
+            <div class="case-persona">
+                <div class="case-media case-media--portrait">
+                    <img src="assets/examesus/03-persona.png" alt="Persona desenvolvida para o projeto ExameSUS" loading="lazy" onerror="this.remove()">
+                </div>
+                <article class="case-card">
+                    <h3>Persona</h3>
+                    <p>Foquei em usuários de maior idade que realizam acompanhamentos anuais e sofrem com processos burocráticos complexos.</p>
+                    <p style="margin-top: 1rem;">Esses usuários necessitam de um atendimento humanizado e desburocratizado, pois a complexidade atual degrada a experiência de quem já possui dificuldades tecnológicas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pesquisa & Benchmarking -->
+        <section class="case-section container" aria-labelledby="research-title">
+            <div class="case-section-header">
+                <span class="case-label">Fases 3 & 4</span>
+                <h2 id="research-title">Pesquisa & Benchmarking</h2>
+                <p>As pesquisas serviram para confirmar ou refutar descobertas, afunilando o problema com dados reais. Foram entrevistadas 4 pessoas com experiências diferentes, mas com dores compartilhadas.</p>
+            </div>
+            <div class="case-tools">
+                <span class="tool-badge">Google Forms</span>
+                <span class="tool-badge">NotebookLM</span>
+                <span class="tool-badge">Google IA Studio</span>
+            </div>
+            <div class="case-grid case-grid--compare">
+                <article class="case-card">
+                    <h3>Key Pain Points</h3>
+                    <ul>
+                        <li>Falta de especialistas</li>
+                        <li>Encaminhamentos prolongados</li>
+                        <li>Demora para realização</li>
+                        <li>Burocracia excessiva</li>
+                        <li>Múltiplas consultas necessárias</li>
+                    </ul>
+                </article>
+                <article class="case-card">
+                    <h3>Key Good Points</h3>
+                    <ul>
+                        <li>Atenção e gentileza dos profissionais</li>
+                        <li>Agilidade no atendimento (quando ocorre)</li>
+                        <li>Capacidade de resolver problemas</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="case-media">
+                <img src="assets/examesus/04-interviews.png" alt="Fotos dos entrevistados com citações" loading="lazy" onerror="this.remove()">
+            </div>
+
+            <div class="case-section-header" style="margin-top: 3rem;">
+                <h2>Benchmarking</h2>
+                <p>Busca por oportunidades no mercado comparando aplicativos de gestão de consultas.</p>
+            </div>
+            <div class="case-grid case-grid--3">
+                <article class="case-card">
+                    <h3>Agendamento Remoto</h3>
+                    <p>Nenhum dos apps analisados facilita o agendamento remoto de forma satisfatória.</p>
+                </article>
+                <article class="case-card">
+                    <h3>Qualidade Geral</h3>
+                    <p>Apenas 1 de 4 funciona bem e atende satisfatoriamente às necessidades dos usuários.</p>
+                </article>
+                <article class="case-card">
+                    <h3>Design Intuitivo</h3>
+                    <p>Apenas metade (1/2) possui design intuitivo e acessível.</p>
+                </article>
+            </div>
+            <blockquote class="quote-block">
+                <p>O principal aplicativo oficial do SUS — "Meu Dig SUS" — não conseguia resolver esses problemas e era muito criticado pela péssima experiência do usuário.</p>
+                <cite>— O Achado de Ouro</cite>
+            </blockquote>
+            <div class="case-media">
+                <img src="assets/examesus/05-benchmark-table.png" alt="Tabela de comparação de aplicativos de saúde" loading="lazy" onerror="this.remove()">
+            </div>
+        </section>
+
+        <!-- Ideação & MVP -->
+        <section class="case-section container" aria-labelledby="ideation-title">
+            <div class="case-section-header">
+                <span class="case-label">Fase 5</span>
+                <h2 id="ideation-title">Ideação & MVP</h2>
+                <p>O MVP foi estruturado com foco em priorizar o sistema de confirmação de identidade e envio de resultados, dividido em fases de lançamento.</p>
+            </div>
+            <div class="case-grid case-grid--2">
+                <article class="case-card">
+                    <h3>Versão Lançamento (Paciente)</h3>
+                    <ul class="case-checklist">
+                        <li>Sistema de confirmação de identidade e documentos</li>
+                        <li>Sistema de envio de resultados</li>
+                    </ul>
+                </article>
+                <article class="case-card">
+                    <h3>Versão Pós-Lançamento (Paciente)</h3>
+                    <ul class="case-checklist">
+                        <li class="is-pending">Chat de atendimento virtual</li>
+                        <li class="is-pending">Busca de informações sobre médicos, procedimentos e horários</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="case-section-header" style="margin-top: 3rem;">
+                <h2>Arquitetura da Informação</h2>
+                <p>Card Sorting realizado com 2 usuários para mapear o modelo mental, seguido de Sitemap e Taskflows para as tarefas principais do MVP.</p>
+            </div>
+            <div class="case-media-grid">
+                <div class="case-media">
+                    <img src="assets/examesus/06-card-sorting-1.png" alt="Teste de Card Sorting — usuário 1" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="case-media">
+                    <img src="assets/examesus/06-card-sorting-2.png" alt="Teste de Card Sorting — usuário 2" loading="lazy" onerror="this.remove()">
+                </div>
+            </div>
+            <div class="case-media case-media--wide case-media--contain">
+                <img src="assets/examesus/07-userflow-sitemap.png" alt="Userflow e Sitemap do MVP" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="case-media">
+                <img src="assets/examesus/08-journey-maps.png" alt="Journey Maps — jornada atual vs. proposta" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="case-media">
+                <img src="assets/examesus/09-impact-effort-matrix.png" alt="Matriz Impacto x Esforço" loading="lazy" onerror="this.remove()">
+            </div>
+        </section>
+
+        <!-- Desenvolvimento -->
+        <section class="case-section container" aria-labelledby="development-title">
+            <div class="case-section-header">
+                <span class="case-label">Fase 6</span>
+                <h2 id="development-title">Desenvolvimento</h2>
+                <p>Evolução visual dos rascunhos de papel para wireframes focados na visualização de etapas, culminando na versão final de alta fidelidade.</p>
+            </div>
+            <div class="case-media-grid">
+                <div class="case-media">
+                    <img src="assets/examesus/10-sketches.png" alt="Esboços digitais iniciais" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="case-media">
+                    <img src="assets/examesus/11-wireframes.png" alt="Wireframes de visualização de etapas" loading="lazy" onerror="this.remove()">
+                </div>
+            </div>
+            <article class="case-card" style="margin-top: 2rem;">
+                <h3>Páginas Chave Implementadas</h3>
+                <p>Histórico de exames e jornada de visualização de etapas.</p>
+            </article>
+            <blockquote class="quote-block">
+                <p>Após feedback do professor Matheus Noronha, abandonei as telas complexas de registro manual de documentos. Aplicando a Lei de Tesler — "Procedimentos complexos devem ser tratados pelo sistema" — simplifiquei o fluxo para que o sistema assuma essa carga.</p>
+                <cite>— Decisão de Design</cite>
+            </blockquote>
+            <div class="case-media-grid">
+                <div class="case-media">
+                    <img src="assets/examesus/12-ui-final-1.png" alt="UI final — Versão 1 em alta fidelidade" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="case-media">
+                    <img src="assets/examesus/13-ui-final-2.png" alt="UI final — telas complementares" loading="lazy" onerror="this.remove()">
+                </div>
+            </div>
+        </section>
+
+        <!-- Validação -->
+        <section class="case-section container" aria-labelledby="validation-title">
+            <div class="case-section-header">
+                <span class="case-label">Fase 7</span>
+                <h2 id="validation-title">Validação</h2>
+                <p>Duas análises heurísticas com IA e testes de usabilidade com 5 participantes para refinar a experiência.</p>
+            </div>
+            <div class="case-validation-grid">
+                <article class="case-card">
+                    <h3>Análise Heurística</h3>
+                    <ul>
+                        <li><strong>Visibilidade:</strong> Inserção de feedback visual (loading) para ações de botões.</li>
+                        <li><strong>Linguagem:</strong> Troca de "Instituição" por "Clínica".</li>
+                        <li><strong>Prevenção de Erros:</strong> Validação de campos para evitar cliques acidentais.</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><span class="case-meta">Taxa de erro inicial:</span> <strong>29,17%</strong></p>
+                </article>
+                <article class="case-card">
+                    <h3>Teste de Usabilidade</h3>
+                    <ul>
+                        <li><strong>Prioridade:</strong> Melhorar navegação de etapas e histórico.</li>
+                        <li><strong>UI:</strong> Carrossel na Home para exames atuais e detalhamento por exame (Resumo, Informações Gerais, Diagnóstico e Imagens).</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="case-validation-grid" style="margin-top: 2rem;">
+                <div class="validation-metric">
+                    <span class="metric-value">30% → 66,7%</span>
+                    <p>Taxa de sucesso para verificar etapas do exame</p>
+                </div>
+                <div class="validation-metric">
+                    <span class="metric-value">−37%</span>
+                    <p>Facilidade de encontrar o histórico (trade-off identificado)</p>
+                </div>
+            </div>
+            <div class="case-media">
+                <img src="assets/examesus/14-usability-tests.png" alt="Figma dos testes de usabilidade" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="case-media-grid" style="margin-top: 1.5rem;">
+                <div class="case-media">
+                    <img src="assets/examesus/15-mockup-final-1.png" alt="Mockup final consolidado" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="case-media">
+                    <img src="assets/examesus/16-mockup-final-2.png" alt="Produto final — composição visual" loading="lazy" onerror="this.remove()">
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Press Release -->
+        <section class="case-section container" aria-labelledby="future-title">
+            <div class="case-section-header">
+                <span class="case-label">Aprendizados</span>
+                <h2 id="future-title">Future Press Release</h2>
+            </div>
+            <blockquote class="quote-block">
+                <p>"Aprendi a importância de apresentar dados de forma profissional. Dificuldades de navegação não são falhas, mas indicativos para a redistribuição estratégica do foco. Descobri que no design, quando o planejado encontra barreiras, a criatividade deve encontrar novos caminhos para a solução."</p>
+                <cite>— Lições Aprendidas</cite>
+            </blockquote>
+            <blockquote class="quote-block">
+                <p>"App ExameSUS reduz burocracia e aumenta em 122% a eficiência no acompanhamento de exames públicos. Desenvolvido pelo designer Átila Silva, a solução digital foca na autonomia de idosos e na desburocratização de processos, prometendo desafogar as salas de espera das UBSs de Minas Gerais."</p>
+                <cite>— Future Press Release · Minas Gerais, 2026</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer id="contato" class="site-footer container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h2>Vamos conversar?</h2>
+                <p>Estou sempre aberto a novos desafios e oportunidades.</p>
+                <a href="mailto:atilacsilva2008@gmail.com" class="contact-link link-arrow">atilacsilva2008@gmail.com</a>
+                <p class="phone-note">(31) 99269-7524 <br><small>*Devido ao estágio, deixe uma mensagem caso ligue entre 13h e 17h.</small></p>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/atila-s-871a9b340/" class="link-arrow" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/AtilaCSilva" class="link-arrow" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="./assets/atila-curriculo.pdf" class="link-arrow" target="_blank" rel="noopener noreferrer">Currículo (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Átila Costa Silva. Designed & Coded by Atlix.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

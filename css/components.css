@@ -1,0 +1,130 @@
+/* Links com seta */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.3s ease, gap 0.3s ease, opacity 0.3s ease;
+}
+
+.link-arrow::after {
+  content: '→';
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+.link-arrow:hover {
+  color: var(--accent);
+}
+
+.link-arrow:hover::after {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.case-link.link-arrow::after {
+  content: '→';
+}
+
+/* Botões */
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.85rem 1.75rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: all 0.35s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-primary);
+  color: var(--accent);
+}
+
+.btn-primary .btn-arrow {
+  display: inline-block;
+  margin-left: 0.35rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+.btn-primary.link-arrow::after,
+.btn-secondary.link-arrow::after {
+  display: none;
+}
+
+/* Glassmorphism — Parallax */
+.glass-shape {
+  position: absolute;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
+}
+
+html.dark .glass-shape {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.glass-1 {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  top: 4%;
+  left: 8%;
+}
+
+.glass-2 {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  top: 32%;
+  right: 6%;
+}
+
+.glass-3 {
+  width: 110px;
+  height: 44px;
+  border-radius: 999px;
+  bottom: 10%;
+  left: 18%;
+}
+
+.parallax-element {
+  will-change: transform;
+}
