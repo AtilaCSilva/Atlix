@@ -128,3 +128,65 @@ html.dark .glass-shape {
 .parallax-element {
   will-change: transform;
 }
+
+/* Lightbox */
+.zoomable-image {
+  cursor: zoom-in;
+  transition: opacity 0.3s ease;
+}
+
+.zoomable-image:hover {
+  opacity: 0.8;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 14, 17, 0.95);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
+}

@@ -95,3 +95,31 @@ if (heroSection && parallaxElements.length) {
         }
     });
 }
+
+// Lightbox — zoom de imagens
+const zoomableImages = document.querySelectorAll('.zoomable-image');
+const lightboxOverlay = document.querySelector('.lightbox-overlay');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+if (zoomableImages.length && lightboxOverlay && lightboxImg && lightboxClose) {
+    const closeLightbox = () => {
+        lightboxOverlay.classList.remove('active');
+    };
+
+    zoomableImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxOverlay.classList.add('active');
+        });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightboxOverlay.addEventListener('click', (e) => {
+        if (e.target === lightboxOverlay) {
+            closeLightbox();
+        }
+    });
+}
