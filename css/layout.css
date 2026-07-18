@@ -67,7 +67,8 @@ html.dark .site-header {
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  align-items: center;
+  gap: 6px;
   width: 2.5rem;
   height: 2.5rem;
   background: none;
@@ -79,23 +80,23 @@ html.dark .site-header {
 
 .menu-toggle-bar {
   display: block;
-  width: 100%;
+  width: 24px;
   height: 2px;
   background-color: var(--text-primary);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.menu-toggle.is-active .menu-toggle-bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.menu-toggle.active .menu-toggle-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
-.menu-toggle.is-active .menu-toggle-bar:nth-child(2) {
+.menu-toggle.active .menu-toggle-bar:nth-child(2) {
   opacity: 0;
 }
 
-.menu-toggle.is-active .menu-toggle-bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.menu-toggle.active .menu-toggle-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 #theme-toggle {

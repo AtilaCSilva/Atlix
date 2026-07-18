@@ -21,7 +21,7 @@ const navLinks = document.querySelector('.nav-links');
 if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('is-active', isOpen);
+        menuToggle.classList.toggle('active', isOpen);
         menuToggle.setAttribute('aria-expanded', isOpen);
         document.body.classList.toggle('menu-open', isOpen);
     });
@@ -29,7 +29,7 @@ if (menuToggle && navLinks) {
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            menuToggle.classList.remove('is-active');
+            menuToggle.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('menu-open');
         });
@@ -38,7 +38,7 @@ if (menuToggle && navLinks) {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
-            menuToggle.classList.remove('is-active');
+            menuToggle.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('menu-open');
             menuToggle.focus();
