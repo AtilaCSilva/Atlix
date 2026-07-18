@@ -51,13 +51,18 @@ const heroSection = document.querySelector('.hero-section');
 const parallaxElements = document.querySelectorAll('.parallax-element');
 
 if (heroSection && parallaxElements.length) {
+    const isMobileViewport = () => window.matchMedia('(max-width: 768px)').matches;
+
     heroSection.addEventListener('mouseenter', () => {
+        if (isMobileViewport()) return;
         parallaxElements.forEach(el => {
             el.style.transition = 'none';
         });
     });
 
     heroSection.addEventListener('mousemove', (e) => {
+        if (isMobileViewport()) return;
+
         const rect = heroSection.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
@@ -73,9 +78,20 @@ if (heroSection && parallaxElements.length) {
     });
 
     heroSection.addEventListener('mouseleave', () => {
+        if (isMobileViewport()) return;
+
         parallaxElements.forEach(el => {
             el.style.transition = 'transform 0.5s ease';
             el.style.transform = 'translate(0, 0)';
         });
+    });
+
+    window.addEventListener('resize', () => {
+        if (isMobileViewport()) {
+            parallaxElements.forEach(el => {
+                el.style.transition = '';
+                el.style.transform = '';
+            });
+        }
     });
 }

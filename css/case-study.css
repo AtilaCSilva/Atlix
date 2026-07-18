@@ -4,7 +4,7 @@
 
 /* Hero do Case */
 .case-hero {
-  padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(3rem, 7vw, 6rem) clamp(2.5rem, 5vw, 4rem);
 }
 
 .case-back {
@@ -89,7 +89,7 @@
 
 /* Seções Editoriais */
 .case-section {
-  padding: clamp(3rem, 6vw, 5rem) 0;
+  padding-block: clamp(3rem, 6vw, 5rem);
   border-top: 1px solid var(--border);
 }
 
@@ -398,6 +398,14 @@ html.dark .case-card--impact {
 
 /* Responsividade — Case Study */
 @media (max-width: 768px) {
+  .case-hero {
+    padding-block: clamp(2.5rem, 6vw, 3.5rem) clamp(2rem, 5vw, 3rem);
+  }
+
+  .case-section {
+    padding-block: 4rem;
+  }
+
   .case-persona {
     grid-template-columns: 1fr;
   }

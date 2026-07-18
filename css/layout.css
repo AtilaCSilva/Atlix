@@ -121,7 +121,8 @@ html:not(.dark) .icon-sun { display: none; }
 
 /* Footer */
 .site-footer {
-  padding: var(--section-gap) 0 2.5rem;
+  padding-block-start: var(--section-gap);
+  padding-block-end: 2.5rem;
   border-top: 1px solid var(--border);
 }
 
@@ -218,6 +219,11 @@ html:not(.dark) .icon-sun { display: none; }
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    padding-block-start: 4rem;
+    padding-block-end: 2rem;
   }
 }
 

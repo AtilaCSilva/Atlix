@@ -50,7 +50,14 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 5vw, 3rem);
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
