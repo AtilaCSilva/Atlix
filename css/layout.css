@@ -34,6 +34,10 @@ html.dark .site-header {
   opacity: 0.9;
 }
 
+.logo-accent {
+  color: var(--accent);
+}
+
 /* Navegação */
 .nav-links {
   display: flex;

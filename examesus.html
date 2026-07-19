@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Átila Costa | Product & UX/UI Designer">
+    <meta property="og:description" content="Projetando interfaces eficientes que conectam pessoas a negócios.">
+    <meta property="og:image" content="images/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Átila Costa | Product & UX/UI Designer">
+    <meta name="twitter:description" content="Projetando interfaces eficientes que conectam pessoas a negócios.">
+    <meta name="twitter:image" content="images/og-image.png">
+
     <title>ExameSUS — Case Study | Átila Costa</title>
     <meta name="description" content="Case study do ExameSUS: aplicativo mobile para desburocratizar atendimentos no SUS. Lead UI/UX Design por Átila Costa Silva.">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +30,7 @@
 <body class="case-page">
     <header class="site-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">Atlix.</a>
+            <a href="index.html" class="logo">Atlix<span class="logo-accent">.</span></a>
 
             <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
                 <span class="menu-toggle-bar"></span>
@@ -47,7 +64,7 @@
                 <li><span class="case-meta">Público:</span> <strong>Trabalho final — Coderhouse</strong></li>
             </ul>
             <div class="case-cover">
-                <img src="assets/examesus/00-cover.png" alt="Mockup final do aplicativo ExameSUS" loading="lazy" onerror="this.remove()">
+                <img src="assets/examesus/cover.png" alt="Mockup final do aplicativo ExameSUS" loading="lazy" onerror="this.remove()">
             </div>
         </section>
 
@@ -78,8 +95,8 @@
                     <p>no acompanhamento de exames públicos.</p>
                 </article>
             </div>
-            <div class="case-media case-media--wide case-media--contain">
-                <img src="assets/examesus/01-double-diamond.png" alt="Diagrama do processo Double Diamond — Discover, Define, Develop e Deliver" loading="lazy">
+            <div class="case-media case-media--wide case-media--contain" aria-label="Clique para expandir a imagem">
+                <img src="assets/examesus/01-double-diamond.png" class="zoomable-image" alt="Diagrama do processo Double Diamond — Discover, Define, Develop e Deliver" loading="lazy">
             </div>
         </section>
 
@@ -114,8 +131,8 @@
                     Através de chatbots, explorei diversas ideias e me aprofundei no conhecimento de como funcionam os sistemas de saúde em todos os âmbitos — além do SUS e os melhores do mundo.
                 </li>
             </ul>
-            <div class="case-media">
-                <img src="assets/examesus/matrizIA.png" alt="Ilustração com balões de ChatGPT e Gemini" loading="lazy" onerror="this.remove()">
+            <div class="case-media" aria-label="Clique para expandir a imagem">
+                <img src="assets/examesus/matrizIA.png" class="zoomable-image" alt="Ilustração com balões de ChatGPT e Gemini" loading="lazy" onerror="this.remove()">
             </div>
         </section>
 
@@ -131,7 +148,7 @@
                 <cite>— POV Statement</cite>
             </blockquote>
             <div class="case-persona">
-                <div class="case-media case-media--portrait">
+                <div class="case-media case-media--portrait" aria-label="Clique para expandir a imagem">
                     <img src="assets/examesus/persona.png" alt="Persona desenvolvida para o projeto ExameSUS" class="zoomable-image" aria-label="Clique para expandir a imagem" loading="lazy" onerror="this.remove()">
                 </div>
                 <article class="case-card">
@@ -320,16 +337,16 @@
                     <p>Facilidade de encontrar o histórico (trade-off identificado)</p>
                 </div>
             </div>
-            <div class="case-media">
-                <img src="assets/examesus/14-usability-tests.png" alt="Figma dos testes de usabilidade" loading="lazy" onerror="this.remove()">
+            <div class="case-media-grid" style="margin-top: 1.5rem;" >
+                <div class="case-media" aria-label="Clique para expandir a imagem">
+                    <img src="assets/examesus/teste-1.png" class="zoomable-image" alt="Figma dos testes de usabilidade" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="case-media" aria-label="Clique para expandir a imagem">
+                    <img src="assets/examesus/teste-2.png" class="zoomable-image" alt="Produto final — composição visual" loading="lazy" onerror="this.remove()">
+                </div>
             </div>
-            <div class="case-media-grid" style="margin-top: 1.5rem;">
-                <div class="case-media">
-                    <img src="assets/examesus/15-mockup-final-1.png" alt="Mockup final consolidado" loading="lazy" onerror="this.remove()">
-                </div>
-                <div class="case-media">
-                    <img src="assets/examesus/16-mockup-final-2.png" alt="Produto final — composição visual" loading="lazy" onerror="this.remove()">
-                </div>
+            <div class="case-media">
+                <img src="assets/examesus/mockup-final.png" alt="Mockup final do aplicativo ExameSUS" loading="lazy" onerror="this.remove()">
             </div>
         </section>
 
@@ -347,6 +364,14 @@
                 <p>"App ExameSUS reduz burocracia e aumenta em 122% a eficiência no acompanhamento de exames públicos. Desenvolvido pelo designer Átila Silva, a solução digital foca na autonomia de idosos e na desburocratização de processos, prometendo desafogar as salas de espera das UBSs de Minas Gerais."</p>
                 <cite>— Future Press Release · Minas Gerais, 2026</cite>
             </blockquote>
+        </section>
+
+        <section class="case-section container" style="text-align: center; margin-top: 2rem; padding-bottom: 2rem; margin-bottom: 0;">
+            <h2 style="margin-bottom: 1.5rem;">Explore o Protótipo</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);">Navegue pela solução final em alta fidelidade e teste os fluxos de interação diretamente no Figma.</p>
+            <a href="https://www.figma.com/proto/e92x5mTvNxh9HrX1Ymer99/Project?node-id=489-3842&t=1eqHaHPVx2KXnAYV-1&scaling=scale-down&content-scaling=fixed&page-id=29%3A1351&starting-point-node-id=489%3A3842&show-proto-sidebar=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex;">
+                Acessar Protótipo Interativo <span class="arrow">→</span>
+            </a>
         </section>
     </main>
 
