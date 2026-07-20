@@ -34,12 +34,12 @@
 <body class="case-page">
     <header class="site-header">
         <div class="container header-container">
-            <a href="index.html" class="logo" aria-label="Atlix - Portfólio de Atila Silva, Product Designer">Atlix<span class="logo-accent">.</span></a>
+            <a href="index.html" class="logo" aria-label="Atlix - Portfólio de Atila Silva, Product Designer"><span class="logo-typewriter">Atlix<span class="logo-accent">.</span></span></a>
 
-            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
-                <span class="menu-toggle-bar"></span>
-                <span class="menu-toggle-bar"></span>
-                <span class="menu-toggle-bar"></span>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-toggle-bar" aria-hidden="true"></span>
+                <span class="menu-toggle-bar" aria-hidden="true"></span>
+                <span class="menu-toggle-bar" aria-hidden="true"></span>
             </button>
 
             <nav id="main-nav" class="nav-links" aria-label="Navegação principal">
@@ -48,9 +48,9 @@
                 <a href="index.html#contato">Contato</a>
             </nav>
 
-            <button id="theme-toggle" aria-label="Alternar tema">
-                <span class="icon-moon">🌙</span>
-                <span class="icon-sun">☀️</span>
+            <button type="button" id="theme-toggle" aria-label="Alternar entre tema claro e escuro">
+                <span class="icon-moon" aria-hidden="true">🌙</span>
+                <span class="icon-sun" aria-hidden="true">☀️</span>
             </button>
         </div>
     </header>
@@ -400,8 +400,8 @@
         </div>
     </footer>
 
-    <div id="lightbox-modal" class="lightbox-overlay">
-        <span class="lightbox-close">&times;</span>
+    <div id="lightbox-modal" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Visualização expandida da imagem">
+        <button type="button" class="lightbox-close" aria-label="Fechar imagem expandida">&times;</button>
         <img class="lightbox-content" id="lightbox-img" alt="Imagem expandida">
     </div>
 

@@ -124,12 +124,32 @@ html.dark .site-header {
 .logo {
   font-size: 1.5rem;
   z-index: 210;
-  transition: color 0.3s ease, opacity 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor::after {
+    animation: none;
+  }
+}
+
+.logo-typewriter {
+  display: inline;
 }
 
 .logo:hover {
   color: var(--accent);
-  opacity: 0.9;
 }
 
 .logo-accent {
@@ -522,9 +542,13 @@ html.dark .glass-shape {
   position: absolute;
   top: 20px;
   right: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
   color: #fff;
   font-size: 40px;
   font-weight: 300;
+  line-height: 1;
   cursor: pointer;
   user-select: none;
   transition: color 0.3s;

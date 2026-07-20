@@ -9,38 +9,41 @@ if (savedTheme === 'dark') {
     htmlElement.classList.add('dark');
 }
 
-themeToggleBtn.addEventListener('click', () => {
-    htmlElement.classList.toggle('dark');
-    localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
-});
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+}
 
 // Menu Mobile (Hamburguer)
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle && navLinks) {
+    const setMenuState = (isOpen) => {
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+        document.body.classList.toggle('menu-open', isOpen);
+    };
+
     menuToggle.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active', isOpen);
-        menuToggle.setAttribute('aria-expanded', isOpen);
-        document.body.classList.toggle('menu-open', isOpen);
+        setMenuState(isOpen);
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            document.body.classList.remove('menu-open');
+            setMenuState(false);
         });
     });
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            document.body.classList.remove('menu-open');
+            setMenuState(false);
             menuToggle.focus();
         }
     });
@@ -96,7 +99,7 @@ if (heroSection && parallaxElements.length) {
     });
 }
 
-// Lightbox — zoom de imagens
+// Lightbox — zoom de imagens (somente na página do case study)
 const zoomableImages = document.querySelectorAll('.zoomable-image');
 const lightboxOverlay = document.querySelector('.lightbox-overlay');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -109,9 +112,10 @@ if (zoomableImages.length && lightboxOverlay && lightboxImg && lightboxClose) {
 
     zoomableImages.forEach(img => {
         img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
+            lightboxImg.src = img.currentSrc || img.src;
             lightboxImg.alt = img.alt;
             lightboxOverlay.classList.add('active');
+            lightboxClose.focus();
         });
     });
 
@@ -122,4 +126,85 @@ if (zoomableImages.length && lightboxOverlay && lightboxImg && lightboxClose) {
             closeLightbox();
         }
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+}
+
+// Logo — efeito typewriter (uma vez no carregamento)
+function initLogoTypewriter() {
+    const logoElement = document.querySelector('.logo');
+    if (!logoElement) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const BRAND = 'Atlix';
+    const NAME = 'Atila';
+    const PAUSE_MS = 2500;
+    const TYPE_SPEED = 90;
+    const DELETE_SPEED = 60;
+
+    let typewriterEl = logoElement.querySelector('.logo-typewriter');
+
+    if (!typewriterEl) {
+        typewriterEl = document.createElement('span');
+        typewriterEl.className = 'logo-typewriter';
+        typewriterEl.setAttribute('aria-hidden', 'true');
+
+        const existingWord = logoElement.textContent.trim().replace(/\.$/, '') || BRAND;
+        logoElement.textContent = '';
+        logoElement.appendChild(typewriterEl);
+        typewriterEl.innerHTML = `${existingWord}<span class="logo-accent">.</span>`;
+    } else {
+        typewriterEl.setAttribute('aria-hidden', 'true');
+    }
+
+    logoElement.classList.add('typing-cursor');
+
+    let displayWord = BRAND;
+
+    const render = (word) => {
+        displayWord = word;
+        typewriterEl.innerHTML = `${word}<span class="logo-accent">.</span>`;
+    };
+
+    const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    const deleteWord = async () => {
+        let word = displayWord;
+        while (word.length > 0) {
+            word = word.slice(0, -1);
+            render(word);
+            await wait(DELETE_SPEED);
+        }
+    };
+
+    const typeWord = async (target) => {
+        let word = '';
+        for (const char of target) {
+            word += char;
+            render(word);
+            await wait(TYPE_SPEED);
+        }
+    };
+
+    const runIntro = async () => {
+        await deleteWord();
+        await typeWord(NAME);
+        await wait(PAUSE_MS);
+        await deleteWord();
+        await typeWord(BRAND);
+        logoElement.classList.remove('typing-cursor');
+    };
+
+    runIntro();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLogoTypewriter);
+} else {
+    initLogoTypewriter();
 }
