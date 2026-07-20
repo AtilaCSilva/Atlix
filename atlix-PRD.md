@@ -1,6 +1,6 @@
 \# PRODUCT REQUIREMENTS DOCUMENT (PRD) \- PORTFÓLIO PESSOAL (V4)
 
-\*\*Autor:\*\* Átila Costa Silva (Atlix)  
+\*\*Autor:\*\* Atila Costa Silva (Atlix)  
 \*\*Função:\*\* Product & UX/UI Designer / Frontend Developer    
 \*\*Estilo Visual:\*\* Zen Editorial (Minimalismo / Elegante / Foco no Conteúdo)    
 \*\*Funcionalidade Principal:\*\* Toggle Light/Dark Mode Nativo via CSS  
@@ -62,7 +62,7 @@ html.dark {
 
 \#\#\# Seção 3: Sobre Mim  
 \*   \*\*Texto de Apresentação:\*\*  
-    \> "Sou Átila, um designer de 17 anos natural de Betim-MG, movido pela curiosidade e pela busca constante por eficiência. Minha jornada começou na ciência e na biologia, mas encontrei na tecnologia o cenário perfeito para explorar a liberdade criativa e analítica, muito inspirado pela trajetória do meu irmão.   
+    \> "Sou Atila, um designer de 17 anos natural de Betim-MG, movido pela curiosidade e pela busca constante por eficiência. Minha jornada começou na ciência e na biologia, mas encontrei na tecnologia o cenário perfeito para explorar a liberdade criativa e analítica, muito inspirado pela trajetória do meu irmão.   
     \>   
     \> Quando não estou projetando interfaces, divido meu foco entre a disciplina física da calistenia e musculação, a música e a sabedoria das filosofias orientais. Sou aficionado pela liberdade e valorizo imensamente o processo de aprendizado contínuo em cada detalhe da vida."
 
@@ -182,7 +182,7 @@ Estrutura em blocos curtos para leitura rápida:
 \#\#\# 4.10 Aprendizados e Futuro (Future Press Release)  
 \*   \*\*Lições Aprendidas:\*\* "Aprendi a importância de apresentar dados de forma profissional. Dificuldades de navegação não são falhas, mas indicativos para a redistribuição estratégica do foco. Descobri que no design, quando o planejado encontra barreiras, a criatividade deve encontrar novos caminhos para a solução."  
 \*   \*\*Chamada de Jornal Imaginária:\*\*   
-    \> "App ExameSUS reduz burocracia e aumenta em 122% a eficiência no acompanhamento de exames públicos. Desenvolvido pelo designer Átila Silva, a solução digital foca na autonomia de idosos e na desburocratização de processos, prometendo desafogar as salas de espera das UBSs de Minas Gerais."
+    \> "App ExameSUS reduz burocracia e aumenta em 122% a eficiência no acompanhamento de exames públicos. Desenvolvido pelo designer Atila Silva, a solução digital foca na autonomia de idosos e na desburocratização de processos, prometendo desafogar as salas de espera das UBSs de Minas Gerais."
 
 \---
 
