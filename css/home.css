@@ -285,6 +285,30 @@ html.dark .hero-image-wrapper {
     padding-block: clamp(2.5rem, 6vw, 4rem);
   }
 
+  /* LCP mobile: H1 visível imediatamente; demais elementos com animação mínima */
+  .slide-up {
+    animation-duration: 0.3s;
+  }
+
+  .slide-up-1,
+  .slide-up-2 {
+    animation-delay: 0s;
+  }
+
+  .slide-up-3 {
+    animation-delay: 0.08s;
+  }
+
+  .slide-up-4 {
+    animation-delay: 0.15s;
+  }
+
+  .headline.slide-up {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
   .about-section,
   .skills-section,
   .projects-section {

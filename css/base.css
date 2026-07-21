@@ -13,7 +13,7 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.7;
   transition: var(--transition-smooth);
 }
@@ -24,7 +24,7 @@ body.menu-open {
 
 /* Tipografia */
 h1, h2, h3, .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -35,7 +35,7 @@ h1, h2, h3, .logo {
 .case-label,
 .footer-bottom,
 .metric-value {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 0.85rem;
   color: var(--text-secondary);
 }

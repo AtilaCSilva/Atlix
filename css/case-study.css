@@ -276,7 +276,7 @@ html.dark .case-card--impact {
 
 .friction-item span {
   display: block;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 1.25rem;
   color: var(--accent);
   font-weight: 500;
@@ -298,7 +298,7 @@ html.dark .case-card--impact {
 }
 
 .quote-block p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   line-height: 1.55;
   font-style: italic;
@@ -309,7 +309,7 @@ html.dark .case-card--impact {
 .quote-block cite {
   display: block;
   margin-top: 1.25rem;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 0.8rem;
   color: var(--text-secondary);
   font-style: normal;
@@ -391,7 +391,7 @@ html.dark .case-card--impact {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 4px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 0.8rem;
   color: var(--text-secondary);
 }

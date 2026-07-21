@@ -36,7 +36,7 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.7;
   transition: var(--transition-smooth);
 }
@@ -47,7 +47,7 @@ body.menu-open {
 
 /* Tipografia */
 h1, h2, h3, .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -58,7 +58,7 @@ h1, h2, h3, .logo {
 .case-label,
 .footer-bottom,
 .metric-value {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 0.85rem;
   color: var(--text-secondary);
 }
@@ -844,6 +844,30 @@ html.dark .hero-image-wrapper {
     padding-block: clamp(2.5rem, 6vw, 4rem);
   }
 
+  /* LCP mobile: H1 visível imediatamente; demais elementos com animação mínima */
+  .slide-up {
+    animation-duration: 0.3s;
+  }
+
+  .slide-up-1,
+  .slide-up-2 {
+    animation-delay: 0s;
+  }
+
+  .slide-up-3 {
+    animation-delay: 0.08s;
+  }
+
+  .slide-up-4 {
+    animation-delay: 0.15s;
+  }
+
+  .headline.slide-up {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
   .about-section,
   .skills-section,
   .projects-section {
@@ -1188,7 +1212,7 @@ html.dark .case-card--impact {
 
 .friction-item span {
   display: block;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 1.25rem;
   color: var(--accent);
   font-weight: 500;
@@ -1210,7 +1234,7 @@ html.dark .case-card--impact {
 }
 
 .quote-block p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   line-height: 1.55;
   font-style: italic;
@@ -1221,7 +1245,7 @@ html.dark .case-card--impact {
 .quote-block cite {
   display: block;
   margin-top: 1.25rem;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 0.8rem;
   color: var(--text-secondary);
   font-style: normal;
@@ -1303,7 +1327,7 @@ html.dark .case-card--impact {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 4px;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
